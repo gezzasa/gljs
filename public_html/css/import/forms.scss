@@ -1,0 +1,64 @@
+/* 
+    Author      :    Gerhard Luyken
+    Description :    Form Element Style
+*/
+
+@import 'import/globals';
+
+.form.gl {
+    .form--input {
+        position: relative;
+        height: $unit * 4;
+        font-size: $font--size-primary;
+        cursor: pointer;
+        margin-bottom: $unit;
+        label {
+            font-size: $font--size-primary;
+        }
+        input {
+            font-size: $font--size-primary;
+            color: $color--primary;
+            border: 0;
+        }
+    }
+    
+    .form--input-text, .form--input-email, .form--input-number, .form--input-password {
+        
+        input {
+            padding: 0 0 0 ($unit/2);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &:focus {
+                outline: none;
+            }
+            border-bottom: 1px solid $color--primary;
+        }
+    }
+    
+    /*Lifting label styles*/
+    .form--input-text, .form--input-email, .form--input-number, .form--input-password {
+        label {
+            position: absolute;
+            z-index: 5;
+            left: 5px;
+            bottom: 0;
+            transition: all $animation-time;
+        }
+        &.focused {
+            label{
+                font-size: ($font--size-primary * .7);
+                color: $color--highlight;
+                bottom: $unit * 2.5;
+                transition: all ($animation-time / 2);
+            }
+        }
+        &.hasContent {
+            label{
+                font-size: ($font--size-primary * .7);
+                bottom: $unit*2.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>GL JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="css/gl.js.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <form class="form gl" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+	
+            <!-- Datalist -->
+            <div class='form--input form--input-datalist' data-type="datalist">
+                <label for="myBrowser">Choose a browser from this list:</label>
+                <input list="browsers" id="myBrowser" name="myBrowser" />
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Safari">
+                    <option value="Microsoft Edge">
+                </datalist>
+            </div>
+
+
+            <!-- Fieldset wraps multiple elements -->
+            <div class='form--input form--input-fieldset' data-type="fieldset">
+                <label for="radio">Fieldsets</label>
+                <fieldset>
+                    <label for="radio">
+                        <input type="radio" id="radio">
+                        Click me
+                    </label>
+                </fieldset>
+            </div>
+
+            <!-- Text input -->
+            <div class='form--input form--input-text' data-type="text">
+                <label for="input1">Normal input</label>
+                <input id="input1" type="text">
+            </div>
+
+            <!-- Checkbox input -->
+            <div class='form--input form--input-checkBox' data-type="checkBox">
+                <label for="checkBox">Checkbox</label>
+                <input id="checkBox" name="checkBox" type="checkbox">
+            </div>
+
+            <!-- Color input -->
+            <div class='form--input form--input-color' data-type="color">
+                <label for="color">Color</label>
+                <input id="color" type="color">
+            </div>
+
+            <!-- Date input -->
+            <div class='form--input form--input-date' data-type="date">
+                <label for="date">Date</label>
+                <input id="date" type="date">
+            </div>
+
+            <!-- Date-time input -->
+            <div class='form--input form--input-datetime' data-type="datetime">
+                <label for="dateTime">Date Time</label>
+                <input id="dateTime" type="datetime-local">
+            </div>
+
+            <!-- Email -->
+            <div class='form--input form--input-email' data-type="email">
+                <label for="email">Email</label>
+                <input id="email" type="email">
+            </div>
+
+            <!-- File -->
+            <div class='form--input form--input-file' data-type="file">
+                <label for="myFile">File</label>
+                <input id="myFile" name="myFile" type="file">
+            </div>
+
+            <!-- Image for graphical submit buttons -->
+            <div class='form--input form--input-image' data-type="image">
+                <label for="image">Image button</label>
+                <input id="image" type="image" alt="Login"
+              src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+            </div>
+
+            <!-- Month input -->
+            <div class='form--input form--input-month' data-type="month">
+                <label for="month">Month</label>
+                <input id="month" type="month">
+            </div>
+
+            <!-- Number input -->
+            <div class='form--input form--input-number' data-type="number">
+                <label for="number">Number</label>
+                <input id="number" type="number">
+            </div>
+
+            <!-- Password input -->
+            <div class='form--input form--input-password' data-type="password">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+            </div>
+
+            <!-- Password input -->
+            <div class='form--input form--input-password' data-type="password">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+            </div>
+
+            <!-- Radio input -->
+            <div class='form--input form--input-radio' data-type="radio">
+                <label for="radio1">
+                    <input id="radio1" name="radio" type="radio">
+                    Radio 1
+                </label>
+                <label for="radio2">
+                    <input id="radio2" name="radio" type="radio">
+                    Radio 2
+                </label>
+                <label for="radio3">
+                    <input id="radio3" name="radio" type="radio">
+                    Radio 3
+                </label>
+                <label for="radio4">
+                    <input id="radio4" name="radio" type="radio">
+                    Radio 4
+                </label>
+            </div>
+
+            <!-- Range input -->
+            <div class='form--input form--input-range' data-type="range">
+                <label for="range">Range</label>
+                <input id="range" type="range">
+            </div>
+
+            <!-- Meter element -->
+            <div class='form--input form--input-meter' data-type="meter">
+                <label for="selectDropdown">Meter</label>
+                <meter min="200" max="500" value="350">350 degrees</meter>
+            </div>
+
+            <!-- Dropdown select element -->
+            <div class='form--input form--input-select' data-type="select">
+                <label for="selectDropdown">Normal dropdown</label>
+                <select id="selectDropdown" name="text">
+                    <option value="value1">Value 1</option> 
+                    <option value="value2" selected>Value 2</option>
+                    <option value="value3">Value 3</option>
+                </select>
+            </div>
+
+            <!-- Dropdown opt group -->
+            <div class='form--input form--input-optgroup' data-type="optgroup">
+                <label for="selectGroup">Dropdown</label>
+                <select id="selectGroup">
+                    <optgroup label="Group 1">
+                        <option>Option 1.1</option>
+                    </optgroup> 
+                    <optgroup label="Group 2">
+                        <option>Option 2.1</option>
+                        <option>Option 2.2</option>
+                    </optgroup>
+                    <optgroup label="Group 3" disabled>
+                        <option>Option 3.1</option>
+                        <option>Option 3.2</option>
+                        <option>Option 3.3</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <!-- Range with output -->
+            <div class='form--input form--input-range' data-type="range">
+                <label for="outputRange">Range with output</label>
+                <input type="range" name="b" value="50" /> +
+                <input type="number" name="a" value="10" /> =
+                <output id="outputRange" name="result">60</output>
+            </div>
+
+            <!-- Progress element -->
+            <div class='form--input form--input-progress' data-type="progress">
+                <label for="progressEl">Progress Element</label>
+                <progress id="progressEl" value="70" max="100">70 %</progress>
+            </div>
+
+            <!-- Text area -->
+            <div class='form--input form--input-textarea' data-type="textarea">
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" name="textarea" rows="10" cols="50"></textarea>
+            </div>
+
+            <!-- Button -->
+            <button data-type="button">Submit</button>
+
+        </form>
+         <script src="js/gl.js.js" type="text/javascript"></script>
+    </body>
+   
+</html>

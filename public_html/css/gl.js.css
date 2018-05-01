@@ -1,0 +1,66 @@
+/*
+
+*/
+/* 
+    Created on : 01 May 2018, 6:02:38 PM
+    Author     : Gerhard Luyken
+*/
+/* 
+    Author      :   Gerhard Luyken
+    Description :   Global variables
+*/
+/*Frame Specific Variable*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box; }
+
+/* 
+    Author      :    Gerhard Luyken
+    Description :    Form Element Style
+*/
+/* 
+    Author      :   Gerhard Luyken
+    Description :   Global variables
+*/
+/*Frame Specific Variable*/
+.form.gl {
+  /*Lifting label styles*/ }
+  .form.gl .form--input {
+    position: relative;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px; }
+    .form.gl .form--input label {
+      font-size: 16px; }
+    .form.gl .form--input input {
+      font-size: 16px;
+      color: #545454;
+      border: 0; }
+  .form.gl .form--input-text input, .form.gl .form--input-email input, .form.gl .form--input-number input, .form.gl .form--input-password input {
+    padding: 0 0 0 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #545454; }
+    .form.gl .form--input-text input:focus, .form.gl .form--input-email input:focus, .form.gl .form--input-number input:focus, .form.gl .form--input-password input:focus {
+      outline: none; }
+  .form.gl .form--input-text label, .form.gl .form--input-email label, .form.gl .form--input-number label, .form.gl .form--input-password label {
+    position: absolute;
+    z-index: 5;
+    left: 5px;
+    bottom: 0;
+    transition: all 0.5s; }
+  .form.gl .form--input-text.focused label, .form.gl .form--input-email.focused label, .form.gl .form--input-number.focused label, .form.gl .form--input-password.focused label {
+    font-size: 11.2px;
+    color: #00b200;
+    bottom: 25px;
+    transition: all 0.25s; }
+  .form.gl .form--input-text.hasContent label, .form.gl .form--input-email.hasContent label, .form.gl .form--input-number.hasContent label, .form.gl .form--input-password.hasContent label {
+    font-size: 11.2px;
+    bottom: 25px; }
+
+/*# sourceMappingURL=gl.js.css.map */
