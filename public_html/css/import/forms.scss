@@ -8,10 +8,11 @@
 .form.gl {
     .form--input {
         position: relative;
-        height: $unit * 4;
+        min-height: $unit * 4;
         font-size: $font--size-primary;
         cursor: pointer;
         margin-bottom: $unit;
+        border-bottom: 1px solid $color--greylight;
         label {
             font-size: $font--size-primary;
         }
@@ -19,26 +20,14 @@
             font-size: $font--size-primary;
             color: $color--primary;
             border: 0;
-        }
-    }
-    
-    .form--input-text, .form--input-email, .form--input-number, .form--input-password {
-        
-        input {
-            padding: 0 0 0 ($unit/2);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             &:focus {
                 outline: none;
             }
-            border-bottom: 1px solid $color--primary;
         }
     }
     
     /*Lifting label styles*/
-    .form--input-text, .form--input-email, .form--input-number, .form--input-password {
+    .form--input-text, .form--input-email, .form--input-password, .form--input-number {
         label {
             position: absolute;
             z-index: 5;
@@ -47,8 +36,8 @@
             transition: all $animation-time;
         }
         &.focused {
-            label{
-                font-size: ($font--size-primary * .7);
+            label{ 
+                font-size: ($font--label-focused);
                 color: $color--highlight;
                 bottom: $unit * 2.5;
                 transition: all ($animation-time / 2);
@@ -56,9 +45,56 @@
         }
         &.hasContent {
             label{
-                font-size: ($font--size-primary * .7);
+                font-size: ($font--label-focused);
                 bottom: $unit*2.5;
             }
         }
+        input {
+            padding: 0 0 $unit/10 ($unit/2);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &:focus {
+                border-bottom: 1px solid $color--highlight;
+            }
+        }
     }
+    
+    .form--input-date, .form--input-datetime, .form--input-meter, .form--input-select, .form--input-file, .form--input-month {
+        label {
+            font-size: ($font--label-focused);
+            position: absolute;
+            z-index: 5;
+            left: 5px;
+            bottom: $unit * 2.5;
+            transition: all $animation-time;
+        }
+        &.focused {
+            label{ 
+                color: $color--highlight;
+                transition: all ($animation-time / 2);
+            }
+        }
+        input, select {
+            padding: 0 0 $unit/10 ($unit/2);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &:focus {
+                border-bottom: 1px solid $color--highlight;
+            }
+        }
+        meter {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &:focus {
+                border-bottom: 1px solid $color--highlight;
+            }
+        }
+    }
+
 }

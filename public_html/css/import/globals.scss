@@ -10,8 +10,11 @@ $unit: 10px;
 $animation-time: 0.5s;
 
 $font--size-primary: $unit * 1.6;
+$font--label-focused: $unit * 1.2;
 $font--family-primary: 'Open Sans';
 
-$color--primary: #545454;
+$color--primary: #3e3e3e;
 $color--highlight: #00b200;
 $color--disabled: #000;
+
+$color--greylight: #e3e3e3;

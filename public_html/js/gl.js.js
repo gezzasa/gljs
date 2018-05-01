@@ -1,4 +1,6 @@
 var gl = (function () {
+    
+    //Get all inputs
     var el = document.getElementsByClassName('form--input');
     
     //Check for form elements
@@ -24,7 +26,6 @@ var gl = (function () {
         },
 
         removeClass: function(el, className) {
-            console.log()
             return el.classList.remove(className);
         },
 
@@ -38,7 +39,7 @@ var gl = (function () {
 
         hasValue: function(el, inputType) {
            
-            if(inputType == 'text' || inputType == 'email' || inputType == 'number'){
+            if(inputType == 'text' || inputType == 'email' || inputType == 'number' || inputType == 'password'){
                 var hasValue = el.getElementsByTagName('input')[0].value.length;
             }
             
@@ -57,17 +58,16 @@ gl.forms = (function () {
         },
         onfocus: function(el) {
             inputType = el.getAttribute('data-type');
-            console.log(inputType);
             gl.addClass(el, 'focused');
         },
         focusout: function(el) {
+            console.log(gl.hasValue(el, inputType));
             if(!gl.hasValue(el, inputType)){
-                gl.removeClass(el, 'focused');
                 gl.removeClass(el, 'hasContent');
             } else {
                 gl.addClass(el, 'hasContent');
             }
-            
+            gl.removeClass(el, 'focused');
             lastFocus = el;
         }
     }

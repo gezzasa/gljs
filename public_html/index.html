@@ -17,7 +17,7 @@ and open the template in the editor.
         <form class="form gl" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
 	
             <!-- Datalist -->
-            <div class='form--input form--input-datalist' data-type="datalist">
+            <div class='form--input form--input-datalist' data-type="datalist" >
                 <label for="myBrowser">Choose a browser from this list:</label>
                 <input list="browsers" id="myBrowser" name="myBrowser" />
                 <datalist id="browsers">
@@ -134,19 +134,13 @@ and open the template in the editor.
                     Radio 4
                 </label>
             </div>
-
-            <!-- Range input -->
-            <div class='form--input form--input-range' data-type="range">
-                <label for="range">Range</label>
-                <input id="range" type="range">
+            
+            <!-- Text area -->
+            <div class='form--input form--input-textarea' data-type="textarea">
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" name="textarea" rows="10" cols="50"></textarea>
             </div>
-
-            <!-- Meter element -->
-            <div class='form--input form--input-meter' data-type="meter">
-                <label for="selectDropdown">Meter</label>
-                <meter min="200" max="500" value="350">350 degrees</meter>
-            </div>
-
+            
             <!-- Dropdown select element -->
             <div class='form--input form--input-select' data-type="select">
                 <label for="selectDropdown">Normal dropdown</label>
@@ -183,17 +177,23 @@ and open the template in the editor.
                 <input type="number" name="a" value="10" /> =
                 <output id="outputRange" name="result">60</output>
             </div>
+            
+            <!-- Range input -->
+            <div class='form--input form--input-range' data-type="range">
+                <label for="range">Range</label>
+                <input id="range" type="range">
+            </div>
 
+            <!-- Meter element -->
+            <div class='form--input form--input-meter' data-type="meter">
+                <label for="selectDropdown">Meter</label>
+                <meter min="200" max="500" value="350">350 degrees</meter>
+            </div>
+            
             <!-- Progress element -->
             <div class='form--input form--input-progress' data-type="progress">
                 <label for="progressEl">Progress Element</label>
                 <progress id="progressEl" value="70" max="100">70 %</progress>
-            </div>
-
-            <!-- Text area -->
-            <div class='form--input form--input-textarea' data-type="textarea">
-                <label for="textarea">Textarea</label>
-                <textarea id="textarea" name="textarea" rows="10" cols="50"></textarea>
             </div>
 
             <!-- Button -->
