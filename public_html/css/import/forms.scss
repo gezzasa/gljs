@@ -15,6 +15,7 @@
         border-bottom: 1px solid $color--greylight;
         label {
             font-size: $font--size-primary;
+            cursor: pointer;
         }
         input {
             font-size: $font--size-primary;
@@ -31,7 +32,7 @@
         label {
             position: absolute;
             z-index: 5;
-            left: 5px;
+            left: $unit * .5;
             bottom: 0;
             transition: all $animation-time;
         }
@@ -66,7 +67,7 @@
             font-size: ($font--label-focused);
             position: absolute;
             z-index: 5;
-            left: 5px;
+            left: $unit * 1.5;
             bottom: $unit * 2.5;
             transition: all $animation-time;
         }
@@ -95,6 +96,44 @@
                 border-bottom: 1px solid $color--highlight;
             }
         }
+        
+    }
+    
+    /* Checkbox Styling */
+    .form--input-checkBox {
+        label {
+            position: absolute;
+            z-index: 5;
+            left: $unit * 4;
+            bottom: 0;
+            transition: all $animation-time;
+        }
+        .form--checkbox-container {
+            left: $unit;
+            height: $unit * 2;
+            width: $unit * 2;
+            top: $unit * 1.5;
+            border: 1px solid $color--greylight;
+            border-radius: 5px;
+        }
+        input{
+            height: $unit * 4;
+            width: 99%;
+            position: absolute;
+            cursor: pointer;
+            z-index: 6;
+            opacity: 0;
+        }
+        &.focused {
+            .form--checkbox-container {
+                
+            }
+            label{ 
+                color: $color--highlight;
+                transition: all ($animation-time / 2);
+            }
+        }
+        
     }
 
 }
