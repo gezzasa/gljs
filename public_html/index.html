@@ -16,89 +16,25 @@ and open the template in the editor.
         
         <form class="form gl" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
 	
-            <!-- Datalist -->
-            <div class='form--input form--input-datalist' data-type="datalist" >
-                <label for="myBrowser">Choose a browser from this list:</label>
-                <input list="browsers" id="myBrowser" name="myBrowser" />
-                <datalist id="browsers">
-                    <option value="Chrome">
-                    <option value="Firefox">
-                    <option value="Internet Explorer">
-                    <option value="Opera">
-                    <option value="Safari">
-                    <option value="Microsoft Edge">
-                </datalist>
-            </div>
-
-
-            <!-- Fieldset wraps multiple elements -->
-            <div class='form--input form--input-fieldset' data-type="fieldset">
-                <label for="radio">Fieldsets</label>
-                <fieldset>
-                    <label for="radio">
-                        <input type="radio" id="radio">
-                        Click me
-                    </label>
-                </fieldset>
-            </div>
-
             <!-- Text input -->
             <div class='form--input form--input-text' data-type="text">
                 <label for="input1">Normal input</label>
                 <input id="input1" type="text">
             </div>
-
-            <!-- Checkbox input -->
-            <div class='form--input form--input-checkBox' data-type="checkbox">
-                <label for="checkBox">Checkbox</label>
-                <div class="form--checkbox-container">
-                    <input id="checkBox" name="checkBox" type="checkbox">
-                </div>
-            </div>
-
-            <!-- Color input -->
-            <div class='form--input form--input-color' data-type="color">
-                <label for="color">Color</label>
-                <input id="color" type="color">
-            </div>
-
-            <!-- Date input -->
-            <div class='form--input form--input-date' data-type="date">
-                <label for="date">Date</label>
-                <input id="date" type="date">
-            </div>
-
-            <!-- Date-time input -->
-            <div class='form--input form--input-datetime' data-type="datetime">
-                <label for="dateTime">Date Time</label>
-                <input id="dateTime" type="datetime-local">
-            </div>
-
+            
             <!-- Email -->
             <div class='form--input form--input-email' data-type="email">
                 <label for="email">Email</label>
                 <input id="email" type="email">
             </div>
-
-            <!-- File -->
-            <div class='form--input form--input-file' data-type="file">
-                <label for="myFile">File</label>
-                <input id="myFile" name="myFile" type="file">
+            
+            <!-- Checkbox input -->
+            <div class='form--input form--input-checkBox' data-type="checkbox">
+                <label for="checkBox">Checkbox</label>
+                <div class="form--checkbox-custom"></div>
+                <input id="checkBox" name="checkBox" type="checkbox">
             </div>
-
-            <!-- Image for graphical submit buttons -->
-            <div class='form--input form--input-image' data-type="image">
-                <label for="image">Image button</label>
-                <input id="image" type="image" alt="Login"
-              src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
-            </div>
-
-            <!-- Month input -->
-            <div class='form--input form--input-month' data-type="month">
-                <label for="month">Month</label>
-                <input id="month" type="month">
-            </div>
-
+            
             <!-- Number input -->
             <div class='form--input form--input-number' data-type="number">
                 <label for="number">Number</label>
@@ -110,13 +46,7 @@ and open the template in the editor.
                 <label for="password">Password</label>
                 <input id="password" type="password">
             </div>
-
-            <!-- Password input -->
-            <div class='form--input form--input-password' data-type="password">
-                <label for="password2">Password</label>
-                <input id="password2" type="password">
-            </div>
-
+            
             <!-- Radio input -->
             <div class='form--input form--input-radio' data-type="radio">
                 <label for="radio1">
@@ -152,7 +82,44 @@ and open the template in the editor.
                     <option value="value3">Value 3</option>
                 </select>
             </div>
+            
+            <!-- Color input -->
+            <div class='form--input form--input-color' data-type="color">
+                <label for="color">Color</label>
+                <input id="color" type="color">
+            </div>
 
+            <!-- Date input -->
+            <div class='form--input form--input-date' data-type="date">
+                <label for="date">Date</label>
+                <input id="date" type="date">
+            </div>
+
+            <!-- Date-time input -->
+            <div class='form--input form--input-datetime' data-type="datetime">
+                <label for="dateTime">Date Time</label>
+                <input id="dateTime" type="datetime-local">
+            </div>
+
+            <!-- File -->
+            <div class='form--input form--input-file' data-type="file">
+                <label for="myFile">File</label>
+                <input id="myFile" name="myFile" type="file">
+            </div>
+
+            <!-- Image for graphical submit buttons -->
+            <div class='form--input form--input-image' data-type="image">
+                <label for="image">Image button</label>
+                <input id="image" type="image" alt="Login"
+              src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+            </div>
+
+            <!-- Month input -->
+            <div class='form--input form--input-month' data-type="month">
+                <label for="month">Month</label>
+                <input id="month" type="month">
+            </div>
+            
             <!-- Dropdown opt group -->
             <div class='form--input form--input-optgroup' data-type="optgroup">
                 <label for="selectGroup">Dropdown</label>
@@ -197,7 +164,33 @@ and open the template in the editor.
                 <label for="progressEl">Progress Element</label>
                 <progress id="progressEl" value="70" max="100">70 %</progress>
             </div>
+            
+            <!-- Datalist -->
+            <div class='form--input form--input-datalist' data-type="datalist" >
+                <label for="myBrowser">Choose a browser from this list:</label>
+                <input list="browsers" id="myBrowser" name="myBrowser" />
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Safari">
+                    <option value="Microsoft Edge">
+                </datalist>
+            </div>
 
+
+            <!-- Fieldset wraps multiple elements -->
+            <div class='form--input form--input-fieldset' data-type="fieldset">
+                <label for="radio">Fieldsets</label>
+                <fieldset>
+                    <label for="radio">
+                        <input type="radio" id="radio">
+                        Click me
+                    </label>
+                </fieldset>
+            </div>
+            
             <!-- Button -->
             <button data-type="button">Submit</button>
 

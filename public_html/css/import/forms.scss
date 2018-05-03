@@ -4,6 +4,7 @@
 */
 
 @import 'import/globals';
+@import 'import/mixins';
 
 .form.gl {
     .form--input {
@@ -51,18 +52,19 @@
             }
         }
         input {
-            padding: 0 0 $unit/10 ($unit/2);
+            padding: ($unit * 1.6) 0 $unit/10 ($unit/2);
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
+            height: $unit * 4;
             &:focus {
                 border-bottom: 1px solid $color--highlight;
             }
         }
     }
     
-    .form--input-date, .form--input-datetime, .form--input-meter, .form--input-select, .form--input-file, .form--input-month {
+    .form--input-date, .form--input-datetime, .form--input-meter, .form--input-select, .form--input-file, .form--input-month, .form--input-textarea {
         label {
             font-size: ($font--label-focused);
             position: absolute;
@@ -99,6 +101,13 @@
         
     }
     
+    /* Text Area Styling */
+    .form--input-textarea {
+        textarea{
+            width: 100%;
+        }
+    }
+    
     /* Checkbox Styling */
     .form--input-checkBox {
         label {
@@ -108,11 +117,12 @@
             bottom: 0;
             transition: all $animation-time;
         }
-        .form--checkbox-container {
-            left: $unit;
+        .form--checkbox-custom {
+            position: absolute;
+            left: $unit * 1;
+            top: $unit * 1.5;
             height: $unit * 2;
             width: $unit * 2;
-            top: $unit * 1.5;
             border: 1px solid $color--greylight;
             border-radius: 5px;
         }
@@ -125,7 +135,7 @@
             opacity: 0;
         }
         &.focused {
-            .form--checkbox-container {
+            .form--checkbox-custom {
                 
             }
             label{ 
@@ -134,6 +144,39 @@
             }
         }
         
+    }
+    
+    .form--input-radio {
+        font-size: 0;
+        label {
+            cursor: pointer;
+            font-size: $font--size-primary;
+            display: inline-block;
+            position: relative;
+            width: $unit * 6;
+            height: $unit * 4;
+            background-color: $color--primary;
+            &:first-child {
+                @include border-radii(($unit * 4), 0, 0, ($unit * 4));
+            }
+            &:last-child {
+                @include border-radii( 0, ($unit * 4), ($unit * 4), 0);
+            }
+            
+        }
+        input{
+            position:absolute;
+            z-index: 2;
+            opacity: 0;
+            width: $unit * 6;
+            height: $unit * 4;
+        }
+        &.focused{
+            label {
+                background-color: $color--highlight;
+                
+            }
+        }
     }
 
 }

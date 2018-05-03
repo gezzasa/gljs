@@ -25,8 +25,13 @@
     Description :   Global variables
 */
 /*Frame Specific Variable*/
+/* 
+    Created on : 03 May 2018, 6:01:27 PM
+    Author     : Gerhard Luyken
+*/
 .form.gl {
   /*Lifting label styles*/
+  /* Text Area Styling */
   /* Checkbox Styling */ }
   .form.gl .form--input {
     position: relative;
@@ -59,49 +64,53 @@
     font-size: 12px;
     bottom: 25px; }
   .form.gl .form--input-text input, .form.gl .form--input-email input, .form.gl .form--input-password input, .form.gl .form--input-number input {
-    padding: 0 0 1px 5px;
+    padding: 16px 0 1px 5px;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    height: 40px; }
     .form.gl .form--input-text input:focus, .form.gl .form--input-email input:focus, .form.gl .form--input-password input:focus, .form.gl .form--input-number input:focus {
       border-bottom: 1px solid #00b200; }
-  .form.gl .form--input-date label, .form.gl .form--input-datetime label, .form.gl .form--input-meter label, .form.gl .form--input-select label, .form.gl .form--input-file label, .form.gl .form--input-month label {
+  .form.gl .form--input-date label, .form.gl .form--input-datetime label, .form.gl .form--input-meter label, .form.gl .form--input-select label, .form.gl .form--input-file label, .form.gl .form--input-month label, .form.gl .form--input-textarea label {
     font-size: 12px;
     position: absolute;
     z-index: 5;
     left: 15px;
     bottom: 25px;
     transition: all 0.3s; }
-  .form.gl .form--input-date.focused label, .form.gl .form--input-datetime.focused label, .form.gl .form--input-meter.focused label, .form.gl .form--input-select.focused label, .form.gl .form--input-file.focused label, .form.gl .form--input-month.focused label {
+  .form.gl .form--input-date.focused label, .form.gl .form--input-datetime.focused label, .form.gl .form--input-meter.focused label, .form.gl .form--input-select.focused label, .form.gl .form--input-file.focused label, .form.gl .form--input-month.focused label, .form.gl .form--input-textarea.focused label {
     color: #00b200;
     transition: all 0.15s; }
-  .form.gl .form--input-date input, .form.gl .form--input-date select, .form.gl .form--input-datetime input, .form.gl .form--input-datetime select, .form.gl .form--input-meter input, .form.gl .form--input-meter select, .form.gl .form--input-select input, .form.gl .form--input-select select, .form.gl .form--input-file input, .form.gl .form--input-file select, .form.gl .form--input-month input, .form.gl .form--input-month select {
+  .form.gl .form--input-date input, .form.gl .form--input-date select, .form.gl .form--input-datetime input, .form.gl .form--input-datetime select, .form.gl .form--input-meter input, .form.gl .form--input-meter select, .form.gl .form--input-select input, .form.gl .form--input-select select, .form.gl .form--input-file input, .form.gl .form--input-file select, .form.gl .form--input-month input, .form.gl .form--input-month select, .form.gl .form--input-textarea input, .form.gl .form--input-textarea select {
     padding: 0 0 1px 5px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%; }
-    .form.gl .form--input-date input:focus, .form.gl .form--input-date select:focus, .form.gl .form--input-datetime input:focus, .form.gl .form--input-datetime select:focus, .form.gl .form--input-meter input:focus, .form.gl .form--input-meter select:focus, .form.gl .form--input-select input:focus, .form.gl .form--input-select select:focus, .form.gl .form--input-file input:focus, .form.gl .form--input-file select:focus, .form.gl .form--input-month input:focus, .form.gl .form--input-month select:focus {
+    .form.gl .form--input-date input:focus, .form.gl .form--input-date select:focus, .form.gl .form--input-datetime input:focus, .form.gl .form--input-datetime select:focus, .form.gl .form--input-meter input:focus, .form.gl .form--input-meter select:focus, .form.gl .form--input-select input:focus, .form.gl .form--input-select select:focus, .form.gl .form--input-file input:focus, .form.gl .form--input-file select:focus, .form.gl .form--input-month input:focus, .form.gl .form--input-month select:focus, .form.gl .form--input-textarea input:focus, .form.gl .form--input-textarea select:focus {
       border-bottom: 1px solid #00b200; }
-  .form.gl .form--input-date meter, .form.gl .form--input-datetime meter, .form.gl .form--input-meter meter, .form.gl .form--input-select meter, .form.gl .form--input-file meter, .form.gl .form--input-month meter {
+  .form.gl .form--input-date meter, .form.gl .form--input-datetime meter, .form.gl .form--input-meter meter, .form.gl .form--input-select meter, .form.gl .form--input-file meter, .form.gl .form--input-month meter, .form.gl .form--input-textarea meter {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%; }
-    .form.gl .form--input-date meter:focus, .form.gl .form--input-datetime meter:focus, .form.gl .form--input-meter meter:focus, .form.gl .form--input-select meter:focus, .form.gl .form--input-file meter:focus, .form.gl .form--input-month meter:focus {
+    .form.gl .form--input-date meter:focus, .form.gl .form--input-datetime meter:focus, .form.gl .form--input-meter meter:focus, .form.gl .form--input-select meter:focus, .form.gl .form--input-file meter:focus, .form.gl .form--input-month meter:focus, .form.gl .form--input-textarea meter:focus {
       border-bottom: 1px solid #00b200; }
+  .form.gl .form--input-textarea textarea {
+    width: 100%; }
   .form.gl .form--input-checkBox label {
     position: absolute;
     z-index: 5;
     left: 40px;
     bottom: 0;
     transition: all 0.3s; }
-  .form.gl .form--input-checkBox .form--checkbox-container {
+  .form.gl .form--input-checkBox .form--checkbox-custom {
+    position: absolute;
     left: 10px;
+    top: 15px;
     height: 20px;
     width: 20px;
-    top: 15px;
     border: 1px solid #e3e3e3;
     border-radius: 5px; }
   .form.gl .form--input-checkBox input {
@@ -114,5 +123,49 @@
   .form.gl .form--input-checkBox.focused label {
     color: #00b200;
     transition: all 0.15s; }
+  .form.gl .form--input-radio {
+    font-size: 0; }
+    .form.gl .form--input-radio label {
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      height: 40px;
+      background-color: #3e3e3e; }
+      .form.gl .form--input-radio label:first-child {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 40px;
+        -webkit-border-top-left-radius: 40px;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -webkit-border-bottom-left-radius: 40px;
+        -moz-border-radius-topleft: 40px;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomright: 0;
+        -moz-border-radius-bottomleft: 40px; }
+      .form.gl .form--input-radio label:last-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 0;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 40px;
+        -webkit-border-bottom-right-radius: 40px;
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 40px;
+        -moz-border-radius-bottomright: 40px;
+        -moz-border-radius-bottomleft: 0; }
+    .form.gl .form--input-radio input {
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      width: 60px;
+      height: 40px; }
+    .form.gl .form--input-radio.focused label {
+      background-color: #00b200; }
 
 /*# sourceMappingURL=gl.js.css.map */

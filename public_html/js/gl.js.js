@@ -8,8 +8,9 @@ var gl = (function () {
     if(el.length > 0){
         //Creating listeners for the form elements
         for(var i = 0; i < el.length; i++){
+            
             el[i].addEventListener('click', function(){
-                this.click(this);
+                gl.forms.click(this);
             });
             el[i].addEventListener('focusin', function(){
                 gl.forms.onfocus(this);
@@ -18,12 +19,15 @@ var gl = (function () {
                 gl.forms.focusout(this);
             });
             
-            var getInputs = el[i].querySelectorAll('input');
+            /*var getInputs = el[i].querySelectorAll('input');
             if(getInputs.length > 0){
-                getInputs[0].addEventListener('change', function(){
-                    gl.forms.change(this);
-                });
-            }
+                console.log(getInputs);
+                for(var b = 0; b > getInputs.length; b++){
+                    getInputs[b].addEventListener('click', function(){
+                        gl.forms.click(this);
+                    });
+                }
+            }*/
             
         }
     }
@@ -31,7 +35,13 @@ var gl = (function () {
     
     return {
         addClass: function(el, className) {
-            return el.classList.add(className);
+            var isRadio = gl.hasClass(el, 'form--input-radio');
+            if(isRadio){
+                console.log(el.querySelectorAll('input')[0]);
+                return el.querySelectorAll('input')[0].classList.add(className);
+            } else {
+                return el.classList.add(className);
+            }
         },
 
         removeClass: function(el, className) {
@@ -64,7 +74,7 @@ gl.forms = (function () {
     return {
         
         click: function(el) {
-            console.log(event);
+            
             gl.addClass(el, 'focused');
             
             //If checkbox, toggle custom check
@@ -92,14 +102,24 @@ gl.forms = (function () {
         },
         
         change: function(me) {
+            var customDiv = me.parentElement.querySelectorAll('div')[0]
             if(me.checked){
-                gl.addClass(me.parentElement, 'checked');
+                gl.addClass(customDiv, 'checked');
+            } else {
+                gl.removeClass(customDiv, 'checked');
             }
         },
         
-        ischecked: function(event, el) {
+        ischecked: function(el) {
+            
             var checkInput = el.querySelectorAll('input');
-            console.log(checkInput[0]);
+            if(el.querySelectorAll('input').length > 0){
+                var isChecked = checkInput[0].checked;
+                if(isChecked){
+
+                }
+            }
+            
             
         }
     }
